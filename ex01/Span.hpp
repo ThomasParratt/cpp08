@@ -12,6 +12,7 @@ class Span //CANONICAL FORM
     public:
         Span(unsigned int N);
         void addNumber(unsigned int num);
+        void addManyNumbers();
         unsigned int shortestSpan();
         unsigned int longestSpan();
 };

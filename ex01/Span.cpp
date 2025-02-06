@@ -13,6 +13,11 @@ void Span::addNumber(unsigned int num)
         throw std::runtime_error("No more elements can be added");
 }
 
+void Span::addManyNumbers()
+{
+    
+}
+
 unsigned int Span::shortestSpan()
 {
     if (vec.size() < 2)
