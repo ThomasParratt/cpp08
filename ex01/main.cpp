@@ -1,6 +1,6 @@
 #include "Span.hpp"
 
-/*int main(void)
+int main(void)
 {
     Span sp = Span(3);
     sp.addNumber(2);
@@ -8,9 +8,15 @@
     sp.addNumber(5);
     std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
     std::cout << "Longest span: " << sp.longestSpan() << std::endl;
-}*/
 
-int main() // subject
+    Span sp1 = Span(5);
+    std::vector<int> temp = {1, 2, 3, 4, 5};
+    sp1.addManyNumbers(temp.begin(), temp.end());
+    std::cout << "Shortest span: " << sp1.shortestSpan() << std::endl;
+    std::cout << "Longest span: " << sp1.longestSpan() << std::endl;
+}
+
+/*int main() // subject
 {
 Span sp = Span(5);
 sp.addNumber(6);
@@ -21,4 +27,4 @@ sp.addNumber(11);
 std::cout << sp.shortestSpan() << std::endl;
 std::cout << sp.longestSpan() << std::endl;
 return 0;
-}
+}*/

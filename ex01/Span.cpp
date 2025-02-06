@@ -13,9 +13,12 @@ void Span::addNumber(unsigned int num)
         throw std::runtime_error("No more elements can be added");
 }
 
-void Span::addManyNumbers()
+void Span::addManyNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end)
 {
-    
+    if ((vec.size() + std::distance(begin, end)) <= N) // why less than or equal to?
+        vec.insert(vec.end(), begin, end);
+    else
+        throw std::runtime_error("No more elements can be added");
 }
 
 unsigned int Span::shortestSpan()
