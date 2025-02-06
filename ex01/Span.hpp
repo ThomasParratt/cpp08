@@ -1,6 +1,8 @@
 #pragma once 
 #include <iostream>
 #include <vector>
+#include <algorithm>
+#include <numeric>
 
 class Span //CANONICAL FORM
 {
@@ -10,6 +12,6 @@ class Span //CANONICAL FORM
     public:
         Span(unsigned int N);
         void addNumber(unsigned int num);
-        //unsigned int shortestSpan();
-        //unsigned int longestSpan();
+        unsigned int shortestSpan();
+        unsigned int longestSpan();
 };
