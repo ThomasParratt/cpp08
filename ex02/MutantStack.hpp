@@ -2,12 +2,10 @@
 #include <iostream>
 #include <stack>
 
-template <typename T>
-class MutantStack
+template<typename T, typename D = std::deque<T>>
+class MutantStack   :   public std::stack<T, D>
 {
     private:
 
     public:
-        bool            empty();
-        //unsigned int    size();
 };
