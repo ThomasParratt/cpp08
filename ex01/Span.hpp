@@ -7,10 +7,10 @@
 class Span //CANONICAL FORM
 {
     private:
-        unsigned int        N;
-        std::vector<int>    vec;
+        unsigned int        _N;
+        std::vector<int>    _vec;
     public:
-        Span(unsigned int N);
+        Span(unsigned int _N);
         void addNumber(unsigned int num);
         void addManyNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end);  //should it work for any container? In which case <typename iterator> should be used
         unsigned int shortestSpan();

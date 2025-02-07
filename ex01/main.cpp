@@ -6,14 +6,28 @@ int main(void)
     sp.addNumber(2);
     sp.addNumber(10);
     sp.addNumber(5);
-    std::cout << "Shortest span: " << sp.shortestSpan() << std::endl;
+    std::cout << "Shortest span: " << sp.shortestSpan() << std::endl; // try catch here?
     std::cout << "Longest span: " << sp.longestSpan() << std::endl;
 
-    Span sp1 = Span(5);
+    Span sp1 = Span(2);
     std::vector<int> temp = {1, 2, 3, 4, 5};
-    sp1.addManyNumbers(temp.begin(), temp.end());
-    std::cout << "Shortest span: " << sp1.shortestSpan() << std::endl;
-    std::cout << "Longest span: " << sp1.longestSpan() << std::endl;
+    try
+    {
+        sp1.addManyNumbers(temp.begin(), temp.end());
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
+    try
+    {
+        std::cout << "Shortest span: " << sp1.shortestSpan() << std::endl; // can these both be in a try statement?
+        std::cout << "Longest span: " << sp1.longestSpan() << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
 }
 
 /*int main() // subject
