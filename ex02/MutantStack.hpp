@@ -6,16 +6,16 @@ template<typename T, typename D = std::deque<T>>
 class MutantStack : public std::stack<T, D>
 {
     private:
-
+        using std::stack<T>::c;
     public:
         typedef typename D::iterator iterator;
         iterator    begin()
         {
-            return (this->begin());
+            return (c.begin());
         }
 
         iterator    end()
         {
-            return (this->end());
+            return (c.end());
         }
 };
