@@ -15,7 +15,7 @@ void Span::addNumber(unsigned int num)
 
 void Span::addManyNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end)
 {
-    if ((_vec.size() + std::distance(begin, end)) <= _N) // why less than or equal to?
+    if ((_vec.size() + std::distance(begin, end)) <= _N)
         _vec.insert(_vec.end(), begin, end);
     else
         throw std::runtime_error("No more elements can be added");
