@@ -12,7 +12,7 @@ class Span //CANONICAL FORM
     public:
         Span(unsigned int _N);
         void addNumber(unsigned int num);
-        void addManyNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end);  //should it work for any container? In which case <typename iterator> should be used
+        void addManyNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end);
         unsigned int shortestSpan();
         unsigned int longestSpan();
 };
