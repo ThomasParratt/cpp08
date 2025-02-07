@@ -3,6 +3,8 @@
 #include <vector>
 #include <algorithm>
 #include <numeric>
+#include <cstdlib>
+#include <ctime>
 
 class Span //CANONICAL FORM
 {

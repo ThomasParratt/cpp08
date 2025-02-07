@@ -43,6 +43,32 @@ int main(void)
     {
         std::cerr << e.what() << std::endl;
     }
+
+    
+    Span sp2 = Span(1000000);
+    std::vector<int> temp1(1000000);
+
+    std::srand(std::time(nullptr));
+    for (int& num : temp1)
+        num = std::rand();
+
+    try
+    {
+        sp2.addManyNumbers(temp1.begin(), temp1.end());
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
+    try
+    {
+        std::cout << "Shortest span: " << sp2.shortestSpan() << std::endl;
+        std::cout << "Longest span: " << sp2.longestSpan() << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
 }
 
 /*int main() // subject
