@@ -19,4 +19,37 @@ class MutantStack : public std::stack<T, D>
         {
             return (c.end());
         }
+
+        typedef typename D::reverse_iterator reverse_iterator;
+        reverse_iterator    rbegin()
+        {
+            return (c.rbegin());
+        }
+
+        reverse_iterator    rend()
+        {
+            return (c.rend());
+        }
+
+        typedef typename D::const_iterator const_iterator;
+        const_iterator    cbegin()
+        {
+            return (c.cbegin());
+        }
+
+        const_iterator    cend()
+        {
+            return (c.cend());
+        }
+
+        typedef typename D::const_reverse_iterator const_reverse_iterator;
+        const_reverse_iterator    crbegin()
+        {
+            return (c.crbegin());
+        }
+
+        const_reverse_iterator    crend()
+        {
+            return (c.crend());
+        }
 };
