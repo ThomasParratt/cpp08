@@ -45,8 +45,8 @@ int main(void)
     }
 
     
-    Span sp2 = Span(1000000);
-    std::vector<int> temp1(1000000);
+    Span sp2 = Span(100000);
+    std::vector<int> temp1(100000);
 
     std::srand(std::time(nullptr));
     for (int& num : temp1)
@@ -71,15 +71,15 @@ int main(void)
     }
 }
 
-/*int main() // subject
-{
-Span sp = Span(5);
-sp.addNumber(6);
-sp.addNumber(3);
-sp.addNumber(17);
-sp.addNumber(9);
-sp.addNumber(11);
-std::cout << sp.shortestSpan() << std::endl;
-std::cout << sp.longestSpan() << std::endl;
-return 0;
-}*/
+// int main() // subject
+// {
+// Span sp = Span(5);
+// sp.addNumber(6);
+// sp.addNumber(3);
+// sp.addNumber(17);
+// sp.addNumber(9);
+// sp.addNumber(11);
+// std::cout << sp.shortestSpan() << std::endl;
+// std::cout << sp.longestSpan() << std::endl;
+// return 0;
+// }

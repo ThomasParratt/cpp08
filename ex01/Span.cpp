@@ -24,14 +24,14 @@ void Span::addManyNumbers(std::vector<int>::iterator begin, std::vector<int>::it
 unsigned int Span::shortestSpan()
 {
     if (_vec.size() < 2)
-        throw std::runtime_error("Not enough numbers stored. Span cannot be found"); 
+        throw std::runtime_error("Not enough numbers stored. Span cannot be found");
 
     std::sort(_vec.begin(), _vec.end());
 
     std::vector<int> diff(_vec.size());
     std::adjacent_difference(_vec.begin(), _vec.end(), diff.begin());
 
-    return (*std::min_element(diff.begin() + 1, diff.end()));
+    return (*std::min_element(diff.begin() + 1, diff.end())); //first element always zero
 }
 
 unsigned int Span::longestSpan()
