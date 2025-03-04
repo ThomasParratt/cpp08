@@ -14,14 +14,19 @@ class MutantStack : public std::stack<T, D> //CANONICAL FORM
             std::cout << "Constructor called" << std::endl;
         }
 
-        MutantStack(const MutantStack&) // need to finish this
+        MutantStack(const MutantStack& cpy) : std::stack<T, D>(cpy)
         {
             std::cout << "Copy constructor called" << std::endl;
+            *this = cpy;
         }
 
-        MutantStack& operator=(const MutantStack&) // need to finish this
+        MutantStack& operator=(const MutantStack& cpy)
         {
-
+            std::cout << "Copy assignment operator called" << std::cout;
+            if (this == &cpy)
+                return (*this);
+            std::stack<T, D>::operator=(cpy);
+            return (*this);
         }
 
         ~MutantStack()
