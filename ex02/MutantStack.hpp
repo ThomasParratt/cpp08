@@ -9,6 +9,23 @@ class MutantStack : public std::stack<T, D> //CANONICAL FORM
     private:
         using std::stack<T>::c;
     public:
+        MutantStack()
+        {
+
+        }
+
+        MutantStack(const MutantStack&)
+        {
+
+        }
+
+        MutantStack& operator=(const MutantStack&)
+        {
+
+        }
+
+        ~MutantStack(){};
+
         typedef typename D::iterator iterator;
         iterator    begin()
         {
