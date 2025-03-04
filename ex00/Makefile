@@ -1,23 +1,27 @@
-NAME		=	easyfind
+NAME        =   easyfind
 
-SRC			=	main.cpp
+SRC         =   main.cpp
+OBJ         =   $(SRC:.cpp=.o)
 
-CC			=	c++
+CC          =   c++
+RM          =   rm -f
 
-RM			=	rm -f
+CFLAGS      =   -Wall -Wextra -Werror
 
-CFLAGS		=	-Wall -Wextra -Werror
+$(NAME):    $(OBJ)
+	        $(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 
-$(NAME):	$(SRC)
-			$(CC) $(CFLAGS) -o $(NAME) $(SRC)
+%.o: %.cpp
+	        $(CC) $(CFLAGS) -c $< -o $@
 
-all:		$(NAME)
+all:        $(NAME)
 
 clean:
-			${RM} $(NAME)
+	        $(RM) $(OBJ)  # Removes only object files
 
-fclean: 	clean
+fclean:     clean
+	        $(RM) $(NAME)  # Removes the executable
 
-re:			fclean all
+re:         fclean all
 
-.PHONY:		all clean fclean re
+.PHONY:     all clean fclean re
