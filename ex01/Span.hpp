@@ -12,7 +12,11 @@ class Span //CANONICAL FORM
         unsigned int        _N;
         std::vector<int>    _vec;
     public:
+        Span();
+        Span(const Span&);
         Span(unsigned int _N);
+        Span& operator=(const Span&);
+        ~Span();
         void addNumber(unsigned int num);
         void addManyNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end);
         unsigned int shortestSpan();

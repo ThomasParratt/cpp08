@@ -1,8 +1,33 @@
 #include "Span.hpp"
 
+Span::Span() : _N(10)
+{
+
+}
+
+Span::Span(const Span& cpy) : _N(cpy._N), _vec(cpy._vec)
+{
+
+}
+
 Span::Span(unsigned int N) : _N(N)
 {
             
+}
+
+Span& Span::operator=(const Span& cpy)
+{
+    if (this != &cpy)
+    {
+        this->_N = cpy._N;
+        this->_vec = cpy._vec;
+    }
+    return (*this);
+}
+
+Span::~Span()
+{
+
 }
 
 void Span::addNumber(unsigned int num)

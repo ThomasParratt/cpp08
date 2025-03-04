@@ -1,6 +1,6 @@
 #include "Span.hpp"
 
-int main(void)
+int main(void) //need to test canonical form
 {
     Span sp = Span(3);
     try
