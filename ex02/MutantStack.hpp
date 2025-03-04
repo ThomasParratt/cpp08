@@ -4,7 +4,7 @@
 #include <list>
 
 template<typename T, typename D = std::deque<T>>
-class MutantStack : public std::stack<T, D>
+class MutantStack : public std::stack<T, D> //CANONICAL FORM
 {
     private:
         using std::stack<T>::c;
