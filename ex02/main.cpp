@@ -4,7 +4,8 @@ int main()
 {
     {
         std::cout << "TEST ONE" << std::endl;
-        MutantStack<int> mstack;
+        MutantStack<int> mstack1;
+        MutantStack<int> mstack(mstack1);
         mstack.push(5);
         mstack.push(17);
         std::cout << "Top of stack => " << mstack.top() << std::endl;

@@ -11,12 +11,12 @@ class MutantStack : public std::stack<T, D> //CANONICAL FORM
     public:
         MutantStack()
         {
-
+            std::cout << "Constructor called" << std::endl;
         }
 
         MutantStack(const MutantStack&)
         {
-
+            std::cout << "Copy constructor called" << std::endl;
         }
 
         MutantStack& operator=(const MutantStack&)
@@ -24,7 +24,10 @@ class MutantStack : public std::stack<T, D> //CANONICAL FORM
 
         }
 
-        ~MutantStack(){};
+        ~MutantStack()
+        {
+            std::cout << "Destructor called" << std::endl;
+        }
 
         typedef typename D::iterator iterator;
         iterator    begin()
