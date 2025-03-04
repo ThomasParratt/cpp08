@@ -64,22 +64,55 @@ int main()
         std::list<int> list;
         list.push_back(5);
         list.push_back(17);
-        std::cout << list.back() << std::endl;
+        std::cout << "Top of stack => " << list.back() << std::endl;
         list.pop_back();
-        std::cout << list.size() << std::endl;
+        std::cout << "Size of stack => " << list.size() << std::endl;
         list.push_back(3);
         list.push_back(5);
         list.push_back(737);
         //[...]
         list.push_back(0);
+
         std::list<int>::iterator it = list.begin();
         std::list<int>::iterator ite = list.end();
         ++it;
         --it;
+        std::cout << "Beginning to end: " << std::endl;
         while (it != ite)
         {
             std::cout << *it << std::endl;
             ++it;
+        }
+        std::list<int>::reverse_iterator rev_it = list.rbegin();
+        std::list<int>::reverse_iterator rev_ite = list.rend();
+        ++rev_it;
+        --rev_it;
+        std::cout << "End to beginning: " << std::endl;
+        while (rev_it != rev_ite)
+        {
+            std::cout << *rev_it << std::endl;
+            ++rev_it;
+        }
+
+        std::list<int>::iterator cit = list.begin();
+        std::list<int>::iterator cite = list.end();
+        ++cit;
+        --cit;
+        std::cout << "Beginning to end: " << std::endl;
+        while (cit != cite)
+        {
+            std::cout << *cit << std::endl;
+            ++cit;
+        }
+        std::list<int>::reverse_iterator crev_it = list.rbegin();
+        std::list<int>::reverse_iterator crev_ite = list.rend();
+        ++crev_it;
+        --crev_it;
+        std::cout << "End to beginning: " << std::endl;
+        while (crev_it != crev_ite)
+        {
+            std::cout << *crev_it << std::endl;
+            ++crev_it;
         }
     }
     return 0;
