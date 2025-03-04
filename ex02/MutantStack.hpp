@@ -22,7 +22,7 @@ class MutantStack : public std::stack<T, D> //CANONICAL FORM
 
         MutantStack& operator=(const MutantStack& cpy)
         {
-            std::cout << "Copy assignment operator called" << std::cout;
+            std::cout << "Copy assignment operator called" << std::endl;
             if (this == &cpy)
                 return (*this);
             std::stack<T, D>::operator=(cpy);
