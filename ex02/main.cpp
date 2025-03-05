@@ -36,27 +36,6 @@ int main()
             std::cout << *rev_it << std::endl;
             ++rev_it;
         }
-
-        MutantStack<int>::iterator cit = mstack.begin();
-        MutantStack<int>::iterator cite = mstack.end();
-        ++cit;
-        --cit;
-        std::cout << "Beginning to end: " << std::endl;
-        while (cit != cite)
-        {
-            std::cout << *cit << std::endl;
-            ++cit;
-        }
-        MutantStack<int>::reverse_iterator crev_it = mstack.rbegin();
-        MutantStack<int>::reverse_iterator crev_ite = mstack.rend();
-        ++crev_it;
-        --crev_it;
-        std::cout << "End to beginning: " << std::endl;
-        while (crev_it != crev_ite)
-        {
-            std::cout << *crev_it << std::endl;
-            ++crev_it;
-        }
     }
     {
         std::cout << "TEST TWO" << std::endl;
@@ -90,27 +69,6 @@ int main()
         {
             std::cout << *rev_it << std::endl;
             ++rev_it;
-        }
-
-        std::list<int>::iterator cit = list.begin();
-        std::list<int>::iterator cite = list.end();
-        ++cit;
-        --cit;
-        std::cout << "Beginning to end: " << std::endl;
-        while (cit != cite)
-        {
-            std::cout << *cit << std::endl;
-            ++cit;
-        }
-        std::list<int>::reverse_iterator crev_it = list.rbegin();
-        std::list<int>::reverse_iterator crev_ite = list.rend();
-        ++crev_it;
-        --crev_it;
-        std::cout << "End to beginning: " << std::endl;
-        while (crev_it != crev_ite)
-        {
-            std::cout << *crev_it << std::endl;
-            ++crev_it;
         }
     }
     return 0;
