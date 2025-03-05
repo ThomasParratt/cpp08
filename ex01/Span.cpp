@@ -30,7 +30,7 @@ Span::~Span()
 
 }
 
-void Span::addNumber(unsigned int num)
+void Span::addNumber(int num)
 {
     if (_vec.size() < _N)
         _vec.push_back(num);

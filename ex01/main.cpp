@@ -48,9 +48,11 @@ int main(void)
     Span sp2 = Span(100000);
     std::vector<int> temp1(100000);
 
-    std::srand(std::time(nullptr));
+    std::mt19937 gen(std::random_device{}());
+    std::uniform_int_distribution<int> dist(std::numeric_limits<int>::min(), std::numeric_limits<int>::max());
+
     for (int& num : temp1)
-        num = std::rand();
+        num = dist(gen);
 
     try
     {

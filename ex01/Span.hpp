@@ -2,9 +2,7 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-#include <numeric>
-#include <cstdlib>
-#include <ctime>
+#include <random>
 
 class Span //CANONICAL FORM
 {
@@ -17,7 +15,7 @@ class Span //CANONICAL FORM
         Span(unsigned int _N);
         Span& operator=(const Span&);
         ~Span();
-        void addNumber(unsigned int num);
+        void addNumber(int num);
         void addManyNumbers(std::vector<int>::iterator begin, std::vector<int>::iterator end);
         unsigned int shortestSpan();
         unsigned int longestSpan();
