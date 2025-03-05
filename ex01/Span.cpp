@@ -5,22 +5,22 @@ Span::Span() : _N(10)
 
 }
 
-Span::Span(const Span& cpy) : _N(cpy._N), _vec(cpy._vec)
+Span::Span(const Span& cpy)
 {
-
+    *this = cpy;
 }
 
 Span::Span(unsigned int N) : _N(N)
 {
-            
+
 }
 
 Span& Span::operator=(const Span& cpy)
 {
     if (this != &cpy)
     {
-        this->_N = cpy._N;
-        this->_vec = cpy._vec;
+        _N = cpy._N;
+        _vec = cpy._vec;
     }
     return (*this);
 }
@@ -56,7 +56,7 @@ unsigned int Span::shortestSpan()
     std::vector<int> diff(_vec.size());
     std::adjacent_difference(_vec.begin(), _vec.end(), diff.begin());
 
-    return (*std::min_element(diff.begin() + 1, diff.end())); //first element always zero
+    return (*std::min_element(diff.begin() + 1, diff.end()));
 }
 
 unsigned int Span::longestSpan()

@@ -4,7 +4,7 @@
 #include <algorithm>
 #include <random>
 
-class Span //CANONICAL FORM
+class Span
 {
     private:
         unsigned int        _N;
