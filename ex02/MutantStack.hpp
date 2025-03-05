@@ -9,30 +9,22 @@ class MutantStack : public std::stack<T, D> //CANONICAL FORM
     private:
         using std::stack<T>::c;
     public:
-        MutantStack()
-        {
-            std::cout << "Constructor called" << std::endl;
-        }
+        MutantStack(){};
 
         MutantStack(const MutantStack& cpy) : std::stack<T, D>(cpy)
         {
-            std::cout << "Copy constructor called" << std::endl;
             *this = cpy;
         }
 
         MutantStack& operator=(const MutantStack& cpy)
         {
-            std::cout << "Copy assignment operator called" << std::endl;
             if (this == &cpy)
                 return (*this);
             std::stack<T, D>::operator=(cpy);
             return (*this);
         }
 
-        ~MutantStack()
-        {
-            std::cout << "Destructor called" << std::endl;
-        }
+        ~MutantStack(){};
 
         typedef typename D::iterator iterator;
         iterator    begin()

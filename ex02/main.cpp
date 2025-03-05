@@ -14,7 +14,6 @@ int main()
         mstack.push(3);
         mstack.push(5);
         mstack.push(737);
-        //[...]
         mstack.push(0);
 
         MutantStack<int>::iterator it = mstack.begin();
@@ -58,7 +57,6 @@ int main()
             std::cout << *crev_it << std::endl;
             ++crev_it;
         }
-        std::stack<int> s(mstack);
     }
     {
         std::cout << "TEST TWO" << std::endl;
@@ -71,7 +69,6 @@ int main()
         list.push_back(3);
         list.push_back(5);
         list.push_back(737);
-        //[...]
         list.push_back(0);
 
         std::list<int>::iterator it = list.begin();
