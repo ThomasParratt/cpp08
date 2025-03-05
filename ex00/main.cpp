@@ -6,7 +6,7 @@ int main()
     
     try 
     {
-        auto it = easyfind(vec, 9);
+        auto it = easyfind(vec, 3);
         std::cout << "Found value: " << *it << std::endl;
     }
     catch (const std::exception &e) 
