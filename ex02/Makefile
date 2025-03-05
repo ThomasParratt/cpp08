@@ -17,10 +17,10 @@ $(NAME):    $(OBJ)
 all:        $(NAME)
 
 clean:
-	        $(RM) $(OBJ)  # Removes only object files
+	        $(RM) $(OBJ)
 
 fclean:     clean
-	        $(RM) $(NAME)  # Removes the executable
+	        $(RM) $(NAME)
 
 re:         fclean all
 
